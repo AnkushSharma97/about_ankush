@@ -10,36 +10,70 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      scroll-behavior: smooth;
     }
 
     body {
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
+      line-height: 1.7;
       background: #f9f9f9;
       color: #333;
     }
 
+    /* Navigation */
+    nav {
+      position: sticky;
+      top: 0;
+      background: #1f3c88;
+      padding: 15px 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      gap: 30px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    /* Container */
     .container {
       width: 85%;
       max-width: 1000px;
-      margin: 20px auto;
+      margin: 40px auto;
     }
 
+    /* Header */
     header {
-      background: #1f3c88;
-      color: white;
-      padding: 30px 0;
       text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #1f3c88, #2e57d1);
+      color: white;
       border-radius: 8px;
+      margin-bottom: 50px;
     }
 
     header h1 {
-      font-size: 2.2em;
+      font-size: 2.8em;
+      margin-bottom: 10px;
     }
 
     header h2 {
       font-weight: normal;
       margin: 10px 0;
+      font-size: 1.5em;
     }
 
     header a {
@@ -47,71 +81,107 @@
       text-decoration: none;
     }
 
+    /* Sections */
+    section {
+      margin-bottom: 60px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #ddd;
+    }
+
     h3 {
       color: #1f3c88;
-      margin-bottom: 10px;
-      border-bottom: 2px solid #1f3c88;
-      display: inline-block;
-      padding-bottom: 5px;
+      margin-bottom: 15px;
+      font-size: 1.8em;
+      border-left: 5px solid #ffd700;
+      padding-left: 10px;
     }
 
-    section {
-      margin-bottom: 30px;
-    }
-
+    /* Skills */
     .skills-list {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 8px;
+      gap: 10px;
       list-style: none;
     }
 
     .skills-list li {
       background: #e6ecf5;
-      padding: 8px 12px;
-      border-radius: 5px;
+      padding: 10px 14px;
+      border-radius: 6px;
+      transition: transform 0.2s, background 0.2s;
     }
 
+    .skills-list li:hover {
+      transform: translateY(-3px);
+      background: #d1dcf2;
+    }
+
+    /* Jobs */
     .job {
-      margin-bottom: 20px;
+      margin-bottom: 25px;
+      padding: 15px;
+      background: #fff;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
+
+    .job:hover {
+      transform: translateY(-3px);
     }
 
     .job h4 {
-      font-size: 1.2em;
+      font-size: 1.3em;
       color: #222;
     }
 
     .job span {
       font-style: italic;
       color: #666;
+      font-size: 0.9em;
     }
 
+    /* Footer */
     footer {
       text-align: center;
-      padding: 15px;
+      padding: 20px;
       background: #1f3c88;
       color: white;
-      border-radius: 8px;
-      margin-top: 20px;
+      border-radius: 8px 8px 0 0;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #ffd700;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#profile">Profile</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+    </ul>
+  </nav>
+
   <!-- Header -->
   <header>
-    <div class="container">
-      <h1>Ankush Sharma</h1>
-      <h2>Senior Data Engineer</h2>
-      <p>Noida, UP | <a href="mailto:ankush.coder97@gmail.com">ankush.coder97@gmail.com</a> | +91 8351818949</p>
-      <p><a href="https://linkedin.com/in/ankush-sharma-587276124/" target="_blank">LinkedIn</a></p>
-    </div>
+    <h1>Ankush Sharma</h1>
+    <h2>Senior Data Engineer</h2>
+    <p>Noida, UP | <a href="mailto:ankush.coder97@gmail.com">ankush.coder97@gmail.com</a> | +91 8351818949</p>
+    <p><a href="https://linkedin.com/in/ankush-sharma-587276124/" target="_blank">LinkedIn</a></p>
   </header>
 
   <!-- Profile -->
   <section id="profile" class="container">
     <h3>Profile</h3>
     <p>
-      Senior Data Engineer with a strong background in building scalable data pipelines, optimizing ETL workflows, and managing large-scale data systems across diverse data domains. Skilled in modern data technologies such as Python, Spark, SQL, Snowflake, and AWS to deliver high-performance, reliable solutions.
+      Senior Data Engineer with a strong background in building scalable data pipelines, optimizing ETL workflows, and managing large-scale data systems across diverse domains. Skilled in modern data technologies such as Python, Spark, SQL, Snowflake, and AWS to deliver high-performance, reliable solutions.
     </p>
   </section>
 
@@ -170,7 +240,7 @@
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Ankush Sharma | Built with ❤️</p>
+    <p>© 2025 Ankush Sharma | Built with ❤️ | <a href="https://github.com/AnkushSharma97" target="_blank">GitHub</a></p>
   </footer>
 </body>
 </html>
