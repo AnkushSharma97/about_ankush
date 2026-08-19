@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ankush Sharma | Senior Data Engineer</title>
   
-  <!-- Modern Inter Font -->
+  <!-- Modern Inter & JetBrains Mono Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-  <!-- Lucide Icons (CDN) -->
+  <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <style>
@@ -25,7 +25,7 @@
       --text-main: #f8fafc;
       --text-muted: #94a3b8;
       --text-accent: #38bdf8;
-      --accent-glow: rgba(56, 189, 248, 0.15);
+      --accent-glow: rgba(56, 189, 248, 0.18);
       
       --badge-bg: rgba(56, 189, 248, 0.08);
       --badge-text: #7dd3fc;
@@ -45,6 +45,7 @@
       color: var(--text-main);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
 
     /* Ambient Background Glow */
@@ -54,7 +55,7 @@
       left: 50%;
       transform: translateX(-50%);
       width: 1000px;
-      height: 400px;
+      height: 450px;
       background: radial-gradient(circle, rgba(56, 189, 248, 0.12) 0%, rgba(11, 17, 32, 0) 70%);
       z-index: -1;
       pointer-events: none;
@@ -118,9 +119,9 @@
       padding: 0 1.5rem;
     }
 
-    /* Hero / Header */
+    /* Hero Section */
     header {
-      padding: 4.5rem 0 3.5rem 0;
+      padding: 4rem 0 3rem 0;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -139,7 +140,7 @@
       border-radius: 50%;
       object-fit: cover;
       border: 3px solid var(--border-focus);
-      box-shadow: 0 0 25px var(--accent-glow);
+      box-shadow: 0 0 30px var(--accent-glow);
     }
 
     .status-badge {
@@ -259,6 +260,13 @@
       color: var(--text-accent);
     }
 
+    .section-subtitle {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-top: -1.25rem;
+      margin-bottom: 2rem;
+    }
+
     /* Profile Summary Card */
     .summary-card {
       background: var(--bg-surface);
@@ -269,6 +277,150 @@
       font-size: 1.02rem;
       line-height: 1.8;
     }
+
+    /* =========================================
+       CLIENT NETWORK ECOSYSTEM (NETWORK GRAPH)
+    ========================================= */
+    .network-container {
+      position: relative;
+      width: 100%;
+      height: 480px;
+      background: radial-gradient(circle at center, rgba(30, 41, 59, 0.5) 0%, var(--bg-surface) 100%);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .network-svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .net-line {
+      stroke: rgba(56, 189, 248, 0.3);
+      stroke-width: 2;
+      stroke-dasharray: 6, 6;
+      animation: dashPulse 25s linear infinite;
+    }
+
+    @keyframes dashPulse {
+      to { stroke-dashoffset: -1000; }
+    }
+
+    /* Center Node */
+    .center-node {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .center-node .pulse-ring {
+      position: absolute;
+      width: 125px;
+      height: 125px;
+      border-radius: 50%;
+      border: 2px solid var(--text-accent);
+      animation: pulse-grow 2.5s infinite ease-out;
+      pointer-events: none;
+    }
+
+    @keyframes pulse-grow {
+      0% { transform: scale(0.9); opacity: 0.8; }
+      100% { transform: scale(1.4); opacity: 0; }
+    }
+
+    .center-node img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      border: 3px solid var(--text-accent);
+      box-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
+      background: var(--bg-main);
+      object-fit: cover;
+    }
+
+    .center-label {
+      margin-top: 8px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid var(--border-focus);
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      color: #fff;
+    }
+
+    /* Client Node Cards */
+    .client-node {
+      position: absolute;
+      z-index: 2;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 0.6rem 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+      cursor: default;
+    }
+
+    .client-node:hover {
+      border-color: var(--border-focus);
+      transform: translate(-50%, -50%) scale(1.08);
+      box-shadow: 0 10px 25px rgba(56, 189, 248, 0.25);
+    }
+
+    .client-node .client-icon {
+      width: 32px;
+      height: 32px;
+      background: rgba(56, 189, 248, 0.1);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-accent);
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+
+    .client-node .client-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .client-node .client-name {
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: #fff;
+    }
+
+    .client-node .client-role {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    /* Relative percentage positions for the 5 client nodes */
+    .node-monotype { top: 18%; left: 50%; }
+    .node-visa     { top: 32%; left: 18%; }
+    .node-oaktree  { top: 72%; left: 22%; }
+    .node-fractal  { top: 32%; left: 82%; }
+    .node-infosys  { top: 72%; left: 78%; }
 
     /* Skills Modular Grid */
     .skills-category-grid {
@@ -328,7 +480,6 @@
       border-radius: 12px;
       padding: 1.75rem;
       transition: all 0.2s ease;
-      position: relative;
     }
 
     .job-card:hover {
@@ -447,14 +598,30 @@
       text-decoration: underline;
     }
 
-    /* Mobile Adaptability */
+    /* Responsive Breakdown for Small Screens */
     @media (max-width: 768px) {
-      header h1 {
-        font-size: 2.1rem;
-      }
+      header h1 { font-size: 2.1rem; }
+      nav ul { display: none; }
 
-      nav ul {
-        display: none; /* Can be expanded with a hamburger menu */
+      .network-container {
+        height: auto;
+        padding: 2rem 1rem;
+      }
+      .network-svg { display: none; }
+      .center-node {
+        position: static;
+        transform: none;
+        margin-bottom: 2rem;
+      }
+      .client-node {
+        position: static;
+        transform: none;
+        margin-bottom: 0.75rem;
+        width: 100%;
+        justify-content: flex-start;
+      }
+      .client-node:hover {
+        transform: translateY(-2px);
       }
     }
   </style>
@@ -469,6 +636,7 @@
       <a href="#" class="nav-logo">Ankush<span>.sharma</span></a>
       <ul>
         <li><a href="#about">About</a></li>
+        <li><a href="#clients">Clients & Brands</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#certifications">Certifications</a></li>
@@ -512,6 +680,85 @@
       <h3 class="section-title"><i data-lucide="user" size="20"></i> Professional Profile</h3>
       <div class="summary-card">
         Senior Data Engineer with proven expertise in architecting high-throughput data lakes, optimizing distributed ETL workflows, and managing resilient cloud pipelines across diverse domains. Specialized in modern distributed systems including <strong>PySpark</strong>, <strong>AWS Data Stack</strong>, <strong>Snowflake</strong>, and <strong>Airflow</strong> to build enterprise-scale, low-latency data infrastructure.
+      </div>
+    </section>
+
+    <!-- NEW SECTION: Client & Enterprise Ecosystem (Visual Hub) -->
+    <section id="clients">
+      <h3 class="section-title"><i data-lucide="network" size="20"></i> Companies & Enterprise Clients</h3>
+      <p class="section-subtitle">Delivering high-impact data engineering solutions for global industry leaders</p>
+      
+      <div class="network-container">
+        <!-- Connecting Vectors with Arrows -->
+        <svg class="network-svg" viewBox="0 0 1000 480" preserveAspectRatio="none">
+          <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#38bdf8" />
+            </marker>
+          </defs>
+          <!-- Center to Top (Monotype) -->
+          <line x1="500" y1="240" x2="500" y2="120" class="net-line" marker-end="url(#arrow)" />
+          <!-- Center to Top-Left (VISA) -->
+          <line x1="500" y1="240" x2="220" y2="165" class="net-line" marker-end="url(#arrow)" />
+          <!-- Center to Bottom-Left (Oaktree) -->
+          <line x1="500" y1="240" x2="260" y2="335" class="net-line" marker-end="url(#arrow)" />
+          <!-- Center to Top-Right (Fractal) -->
+          <line x1="500" y1="240" x2="780" y2="165" class="net-line" marker-end="url(#arrow)" />
+          <!-- Center to Bottom-Right (Infosys) -->
+          <line x1="500" y1="240" x2="740" y2="335" class="net-line" marker-end="url(#arrow)" />
+        </svg>
+
+        <!-- Center Node -->
+        <div class="center-node">
+          <div class="pulse-ring"></div>
+          <img src="profile.jpg" alt="Ankush Sharma">
+          <span class="center-label">Data Architecture</span>
+        </div>
+
+        <!-- Node 1: Monotype -->
+        <div class="client-node node-monotype">
+          <div class="client-icon">M</div>
+          <div class="client-info">
+            <span class="client-name">Monotype</span>
+            <span class="client-role">Data Lake & AWS</span>
+          </div>
+        </div>
+
+        <!-- Node 2: VISA -->
+        <div class="client-node node-visa">
+          <div class="client-icon">V</div>
+          <div class="client-info">
+            <span class="client-name">VISA</span>
+            <span class="client-role">Client Project</span>
+          </div>
+        </div>
+
+        <!-- Node 3: Oaktree Capital -->
+        <div class="client-node node-oaktree">
+          <div class="client-icon">O</div>
+          <div class="client-info">
+            <span class="client-name">Oaktree Capital</span>
+            <span class="client-role">FinTech Data</span>
+          </div>
+        </div>
+
+        <!-- Node 4: Fractal Analytics -->
+        <div class="client-node node-fractal">
+          <div class="client-icon">F</div>
+          <div class="client-info">
+            <span class="client-name">Fractal Analytics</span>
+            <span class="client-role">Large Scale ETL</span>
+          </div>
+        </div>
+
+        <!-- Node 5: Infosys -->
+        <div class="client-node node-infosys">
+          <div class="client-icon">I</div>
+          <div class="client-info">
+            <span class="client-name">Infosys</span>
+            <span class="client-role">Data Pipelines</span>
+          </div>
+        </div>
       </div>
     </section>
 
