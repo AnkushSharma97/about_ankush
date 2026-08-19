@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ankush Sharma | Senior Data Engineer</title>
   
-  <!-- Modern Inter & JetBrains Mono Fonts -->
+  <!-- Modern Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -48,14 +48,14 @@
       overflow-x: hidden;
     }
 
-    /* Ambient Background Glow */
     .ambient-bg {
       position: fixed;
       top: 0;
       left: 50%;
       transform: translateX(-50%);
-      width: 1000px;
-      height: 450px;
+      width: 100%;
+      max-width: 1000px;
+      height: 400px;
       background: radial-gradient(circle, rgba(56, 189, 248, 0.12) 0%, rgba(11, 17, 32, 0) 70%);
       z-index: -1;
       pointer-events: none;
@@ -67,7 +67,7 @@
       top: 0;
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
-      background: rgba(11, 17, 32, 0.85);
+      background: rgba(11, 17, 32, 0.9);
       border-bottom: 1px solid var(--border-subtle);
       z-index: 1000;
       padding: 0.85rem 0;
@@ -76,7 +76,7 @@
     .nav-container {
       max-width: 1000px;
       margin: 0 auto;
-      padding: 0 1.5rem;
+      padding: 0 1.25rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -97,13 +97,13 @@
     nav ul {
       display: flex;
       list-style: none;
-      gap: 1.75rem;
+      gap: 1.5rem;
     }
 
     nav a {
       color: var(--text-muted);
       text-decoration: none;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-weight: 500;
       transition: color 0.2s ease;
     }
@@ -112,60 +112,58 @@
       color: var(--text-accent);
     }
 
-    /* Layout Container */
     .container {
       max-width: 1000px;
       margin: 0 auto;
-      padding: 0 1.5rem;
+      padding: 0 1.25rem;
     }
 
-    /* Hero Section */
+    /* Header / Hero Section */
     header {
-      padding: 4rem 0 3rem 0;
+      padding: 3.5rem 0 2.5rem 0;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
-      position: relative;
     }
 
     .avatar-wrapper {
       position: relative;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
     }
 
     .profile-pic {
-      width: 130px;
-      height: 130px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
       object-fit: cover;
       border: 3px solid var(--border-focus);
-      box-shadow: 0 0 30px var(--accent-glow);
+      box-shadow: 0 0 25px var(--accent-glow);
     }
 
     .status-badge {
       position: absolute;
-      bottom: 6px;
-      right: 6px;
+      bottom: 5px;
+      right: 5px;
       background: #10b981;
-      width: 16px;
-      height: 16px;
+      width: 15px;
+      height: 15px;
       border-radius: 50%;
       border: 3px solid var(--bg-main);
     }
 
     header h1 {
-      font-size: 2.75rem;
+      font-size: 2.4rem;
       font-weight: 800;
       letter-spacing: -0.03em;
-      margin-bottom: 0.35rem;
+      margin-bottom: 0.25rem;
       background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
     header h2 {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       color: var(--text-accent);
       font-weight: 500;
       margin-bottom: 1rem;
@@ -175,10 +173,10 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 1.25rem;
+      gap: 1rem;
       color: var(--text-muted);
-      font-size: 0.9rem;
-      margin-bottom: 1.75rem;
+      font-size: 0.88rem;
+      margin-bottom: 1.5rem;
     }
 
     .meta-item {
@@ -190,7 +188,6 @@
     .meta-item a {
       color: var(--text-muted);
       text-decoration: none;
-      transition: color 0.2s;
     }
 
     .meta-item a:hover {
@@ -199,27 +196,26 @@
 
     .cta-buttons {
       display: flex;
-      gap: 1rem;
+      gap: 0.75rem;
       flex-wrap: wrap;
+      justify-content: center;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      padding: 0.65rem 1.25rem;
+      padding: 0.6rem 1.2rem;
       border-radius: 8px;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-weight: 500;
       text-decoration: none;
       transition: all 0.2s ease;
-      cursor: pointer;
     }
 
     .btn-primary {
       background: #0284c7;
       color: #fff;
-      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.3);
     }
 
     .btn-primary:hover {
@@ -235,21 +231,20 @@
 
     .btn-secondary:hover {
       background: var(--bg-card-hover);
-      border-color: var(--text-muted);
       transform: translateY(-1px);
     }
 
-    /* Sections */
+    /* Section Typography */
     section {
-      padding: 3rem 0;
+      padding: 2.5rem 0;
       border-top: 1px solid rgba(255, 255, 255, 0.06);
     }
 
     .section-title {
-      font-size: 1.4rem;
+      font-size: 1.35rem;
       font-weight: 700;
       letter-spacing: -0.02em;
-      margin-bottom: 1.75rem;
+      margin-bottom: 1.5rem;
       display: flex;
       align-items: center;
       gap: 0.6rem;
@@ -262,30 +257,29 @@
 
     .section-subtitle {
       color: var(--text-muted);
-      font-size: 0.95rem;
-      margin-top: -1.25rem;
-      margin-bottom: 2rem;
+      font-size: 0.9rem;
+      margin-top: -1rem;
+      margin-bottom: 1.75rem;
     }
 
-    /* Profile Summary Card */
     .summary-card {
       background: var(--bg-surface);
       border: 1px solid var(--border-subtle);
       border-radius: 12px;
-      padding: 1.75rem;
+      padding: 1.5rem;
       color: #cbd5e1;
-      font-size: 1.02rem;
+      font-size: 1rem;
       line-height: 1.8;
     }
 
-    /* =========================================
-       CLIENT NETWORK ECOSYSTEM (NETWORK GRAPH)
-    ========================================= */
+    /* =======================================================
+       RESPONSIVE CLIENT NETWORK / ECOSYSTEM
+    ======================================================= */
     .network-container {
       position: relative;
       width: 100%;
-      height: 480px;
-      background: radial-gradient(circle at center, rgba(30, 41, 59, 0.5) 0%, var(--bg-surface) 100%);
+      min-height: 480px;
+      background: radial-gradient(circle at center, rgba(30, 41, 59, 0.4) 0%, var(--bg-surface) 100%);
       border: 1px solid var(--border-subtle);
       border-radius: 16px;
       overflow: hidden;
@@ -305,7 +299,7 @@
     }
 
     .net-line {
-      stroke: rgba(56, 189, 248, 0.3);
+      stroke: rgba(56, 189, 248, 0.4);
       stroke-width: 2;
       stroke-dasharray: 6, 6;
       animation: dashPulse 25s linear infinite;
@@ -329,8 +323,8 @@
 
     .center-node .pulse-ring {
       position: absolute;
-      width: 125px;
-      height: 125px;
+      width: 110px;
+      height: 110px;
       border-radius: 50%;
       border: 2px solid var(--text-accent);
       animation: pulse-grow 2.5s infinite ease-out;
@@ -339,28 +333,29 @@
 
     @keyframes pulse-grow {
       0% { transform: scale(0.9); opacity: 0.8; }
-      100% { transform: scale(1.4); opacity: 0; }
+      100% { transform: scale(1.35); opacity: 0; }
     }
 
     .center-node img {
-      width: 90px;
-      height: 90px;
+      width: 80px;
+      height: 80px;
       border-radius: 50%;
       border: 3px solid var(--text-accent);
-      box-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.35);
       background: var(--bg-main);
       object-fit: cover;
     }
 
     .center-label {
       margin-top: 8px;
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       font-weight: 700;
-      background: rgba(15, 23, 42, 0.85);
+      background: rgba(15, 23, 42, 0.9);
       border: 1px solid var(--border-focus);
-      padding: 0.2rem 0.6rem;
+      padding: 0.15rem 0.55rem;
       border-radius: 999px;
       color: #fff;
+      white-space: nowrap;
     }
 
     /* Client Node Cards */
@@ -370,38 +365,39 @@
       background: var(--bg-card);
       border: 1px solid var(--border-subtle);
       border-radius: 12px;
-      padding: 0.65rem 1.1rem;
+      padding: 0.6rem 1rem;
       display: flex;
       align-items: center;
       gap: 0.75rem;
       transform: translate(-50%, -50%);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
       transition: all 0.3s ease;
       cursor: default;
     }
 
     .client-node:hover {
       border-color: var(--border-focus);
-      transform: translate(-50%, -50%) scale(1.08);
-      box-shadow: 0 10px 25px rgba(56, 189, 248, 0.25);
+      transform: translate(-50%, -50%) scale(1.05);
+      box-shadow: 0 8px 25px rgba(56, 189, 248, 0.25);
     }
 
     .client-logo-box {
-      width: 38px;
-      height: 38px;
+      width: 40px;
+      height: 40px;
       background: #ffffff;
       border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 4px;
+      padding: 5px;
       flex-shrink: 0;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      overflow: hidden;
     }
 
-    .client-logo-box svg {
+    .client-logo-box img {
       width: 100%;
       height: 100%;
+      object-fit: contain;
     }
 
     .client-node .client-info {
@@ -411,26 +407,26 @@
 
     .client-node .client-name {
       font-weight: 700;
-      font-size: 0.92rem;
+      font-size: 0.88rem;
       color: #fff;
     }
 
     .client-node .client-role {
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       color: var(--text-muted);
     }
 
-    /* Relative percentage positions for the 5 client nodes */
+    /* Positions for Desktop Graph */
     .node-monotype { top: 18%; left: 50%; }
-    .node-visa     { top: 32%; left: 18%; }
+    .node-visa     { top: 32%; left: 20%; }
     .node-oaktree  { top: 72%; left: 22%; }
-    .node-fractal  { top: 32%; left: 82%; }
+    .node-fractal  { top: 32%; left: 80%; }
     .node-infosys  { top: 72%; left: 78%; }
 
-    /* Skills Modular Grid */
+    /* Skills Grid */
     .skills-category-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.25rem;
     }
 
@@ -472,18 +468,18 @@
       border-radius: 6px;
     }
 
-    /* Experience Timeline */
+    /* Experience */
     .experience-list {
       display: flex;
       flex-direction: column;
-      gap: 1.5rem;
+      gap: 1.25rem;
     }
 
     .job-card {
       background: var(--bg-surface);
       border: 1px solid var(--border-subtle);
       border-radius: 12px;
-      padding: 1.75rem;
+      padding: 1.5rem;
       transition: all 0.2s ease;
     }
 
@@ -502,7 +498,7 @@
     }
 
     .job-title-group h4 {
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       font-weight: 600;
       color: #fff;
     }
@@ -510,28 +506,28 @@
     .job-company {
       color: var(--text-accent);
       font-weight: 500;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
     }
 
     .job-date {
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       color: var(--text-muted);
       background: var(--bg-card);
-      padding: 0.25rem 0.75rem;
+      padding: 0.2rem 0.65rem;
       border-radius: 999px;
       border: 1px solid var(--border-subtle);
     }
 
     .job-description {
       color: #cbd5e1;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       line-height: 1.7;
     }
 
-    /* Certifications Grid */
+    /* Certifications */
     .cert-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 1rem;
     }
 
@@ -556,38 +552,38 @@
     }
 
     .cert-card span {
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       font-weight: 500;
       color: #e2e8f0;
     }
 
-    /* Education Card */
+    /* Education */
     .edu-card {
       background: var(--bg-surface);
       border: 1px solid var(--border-subtle);
       border-radius: 12px;
-      padding: 1.5rem;
+      padding: 1.25rem 1.5rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 0.75rem;
     }
 
     .edu-title {
       font-weight: 600;
-      font-size: 1.05rem;
+      font-size: 1rem;
     }
 
     .edu-field {
       color: var(--text-muted);
-      font-size: 0.9rem;
+      font-size: 0.88rem;
     }
 
     /* Footer */
     footer {
       border-top: 1px solid var(--border-subtle);
-      padding: 2.5rem 0;
+      padding: 2.25rem 0;
       text-align: center;
       color: var(--text-muted);
       font-size: 0.85rem;
@@ -599,32 +595,57 @@
       text-decoration: none;
     }
 
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    /* Responsive Breakdown for Small Screens */
+    /* =======================================================
+       MOBILE OPTIMIZATIONS (FLUID, STACKED LAYOUT)
+    ======================================================= */
     @media (max-width: 768px) {
-      header h1 { font-size: 2.1rem; }
-      nav ul { display: none; }
-
-      .network-container {
-        height: auto;
-        padding: 2rem 1rem;
+      nav ul {
+        display: none; /* Simplifies mobile top bar */
       }
-      .network-svg { display: none; }
+      
+      header {
+        padding: 2.5rem 0 2rem 0;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      /* Clean stacked list on mobile */
+      .network-container {
+        min-height: auto;
+        padding: 1.5rem 1rem;
+        flex-direction: column;
+        gap: 0.85rem;
+      }
+
+      .network-svg {
+        display: none; /* Hide desktop SVG connecting lines */
+      }
+
       .center-node {
         position: static;
         transform: none;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
       }
+
+      .center-node img {
+        width: 70px;
+        height: 70px;
+      }
+
+      .center-node .pulse-ring {
+        display: none;
+      }
+
       .client-node {
         position: static;
         transform: none;
-        margin-bottom: 0.75rem;
         width: 100%;
+        max-width: 360px;
         justify-content: flex-start;
       }
+
       .client-node:hover {
         transform: translateY(-2px);
       }
@@ -645,9 +666,8 @@
         <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#education">Education</a></li>
       </ul>
-      <a href="mailto:ankush.coder97@gmail.com" class="btn btn-primary" style="padding: 0.4rem 0.9rem; font-size: 0.8rem;">
+      <a href="mailto:ankush.coder97@gmail.com" class="btn btn-primary" style="padding: 0.4rem 0.85rem; font-size: 0.8rem;">
         Get in touch
       </a>
     </div>
@@ -655,32 +675,32 @@
 
   <div class="container">
 
-    <!-- Header / Hero Section -->
+    <!-- Header / Hero -->
     <header>
       <div class="avatar-wrapper">
-        <img src="profile.jpg" alt="Ankush Sharma" class="profile-pic">
+        <img src="profile.jpg" alt="Ankush Sharma" class="profile-pic" onerror="this.src='https://ui-avatars.com/api/?name=Ankush+Sharma&background=0284c7&color=fff&size=150'">
         <div class="status-badge" title="Available for opportunities"></div>
       </div>
       <h1>Ankush Sharma</h1>
       <h2>Senior Data Engineer</h2>
 
       <div class="meta-details">
-        <span class="meta-item"><i data-lucide="map-pin" size="16"></i> Noida, UP, India</span>
-        <span class="meta-item"><i data-lucide="mail" size="16"></i> <a href="mailto:ankush.coder97@gmail.com">ankush.coder97@gmail.com</a></span>
-        <span class="meta-item"><i data-lucide="phone" size="16"></i> +91 8351818949</span>
+        <span class="meta-item"><i data-lucide="map-pin" size="15"></i> Noida, UP, India</span>
+        <span class="meta-item"><i data-lucide="mail" size="15"></i> <a href="mailto:ankush.coder97@gmail.com">ankush.coder97@gmail.com</a></span>
+        <span class="meta-item"><i data-lucide="phone" size="15"></i> +91 8351818949</span>
       </div>
 
       <div class="cta-buttons">
         <a href="https://linkedin.com/in/ankush-sharma-587276124/" target="_blank" class="btn btn-primary">
-          <i data-lucide="linkedin" size="18"></i> LinkedIn
+          <i data-lucide="linkedin" size="16"></i> LinkedIn
         </a>
         <a href="https://github.com/AnkushSharma97" target="_blank" class="btn btn-secondary">
-          <i data-lucide="github" size="18"></i> GitHub Profile
+          <i data-lucide="github" size="16"></i> GitHub Profile
         </a>
       </div>
     </header>
 
-    <!-- About Section -->
+    <!-- Professional Profile Section -->
     <section id="about">
       <h3 class="section-title"><i data-lucide="user" size="20"></i> Professional Profile</h3>
       <div class="summary-card">
@@ -688,46 +708,32 @@
       </div>
     </section>
 
-    <!-- CLIENT NETWORK ECOSYSTEM (NETWORK GRAPH WITH VECTOR LOGOS) -->
+    <!-- Visual Client Hub (Mobile-Responsive & Direct Image Support) -->
     <section id="clients">
       <h3 class="section-title"><i data-lucide="network" size="20"></i> Companies & Enterprise Clients</h3>
       <p class="section-subtitle">Delivering high-impact data engineering solutions for global industry leaders</p>
       
-      <div class="network-container">
-        <!-- Connecting Vectors with Arrows -->
-        <svg class="network-svg" viewBox="0 0 1000 480" preserveAspectRatio="none">
+      <div class="network-container" id="networkWrapper">
+        <!-- SVG lines calculated dynamically for exact responsive alignment -->
+        <svg class="network-svg" id="networkSvg">
           <defs>
             <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
               <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#38bdf8" />
             </marker>
           </defs>
-          <!-- Center to Top (Monotype) -->
-          <line x1="500" y1="240" x2="500" y2="120" class="net-line" marker-end="url(#arrow)" />
-          <!-- Center to Top-Left (VISA) -->
-          <line x1="500" y1="240" x2="220" y2="165" class="net-line" marker-end="url(#arrow)" />
-          <!-- Center to Bottom-Left (Oaktree) -->
-          <line x1="500" y1="240" x2="260" y2="335" class="net-line" marker-end="url(#arrow)" />
-          <!-- Center to Top-Right (Fractal) -->
-          <line x1="500" y1="240" x2="780" y2="165" class="net-line" marker-end="url(#arrow)" />
-          <!-- Center to Bottom-Right (Infosys) -->
-          <line x1="500" y1="240" x2="740" y2="335" class="net-line" marker-end="url(#arrow)" />
         </svg>
 
         <!-- Center Node -->
-        <div class="center-node">
+        <div class="center-node" id="centerNode">
           <div class="pulse-ring"></div>
-          <img src="profile.jpg" alt="Ankush Sharma">
+          <img src="profile.jpg" alt="Ankush Sharma" onerror="this.src='https://ui-avatars.com/api/?name=Ankush+Sharma&background=0284c7&color=fff&size=100'">
           <span class="center-label">Data Architecture</span>
         </div>
 
         <!-- Node 1: Monotype -->
-        <div class="client-node node-monotype">
-          <div class="client-logo-box" title="Monotype Logo">
-            <svg viewBox="0 0 100 100">
-              <rect width="100" height="100" fill="#000" rx="4"/>
-              <path d="M22 75 V25 L45 52 L68 25 V75 H54 V46 L45 57 L36 46 V75 Z" fill="#fff" />
-              <rect x="74" y="62" width="12" height="13" fill="#e11d48"/>
-            </svg>
+        <div class="client-node node-monotype" id="node-monotype">
+          <div class="client-logo-box">
+            <img src="images/monotype.png" alt="Monotype" onerror="this.src='https://logo.clearbit.com/monotype.com'">
           </div>
           <div class="client-info">
             <span class="client-name">Monotype</span>
@@ -736,14 +742,9 @@
         </div>
 
         <!-- Node 2: VISA -->
-        <div class="client-node node-visa">
-          <div class="client-logo-box" title="VISA Logo">
-            <svg viewBox="0 0 120 40">
-              <path d="M47.2 2.4L31.6 37.6H21.2L12.9 8.2c-.6-2.4-1.2-3.3-3.1-4.3C6.7 2.2 2.6 0.8 0 0.2l.6 2.2c4.4.9 9.5 2.5 12.8 4.3 1.9 1 2.5 2.1 3 4.2l7.7 30.9H35L52.8 2.4h-5.6z" fill="#1434CB"/>
-              <path d="M68.5 26.2c0-5.8-8-6.1-7.9-8.7.1-1 1-2 3.1-2.3 1-.1 4-.2 7.3 1.3l1.3-6.1c-1.8-.7-4.1-1.1-7.1-1.1-7.5 0-12.8 4-12.8 9.7 0 4.2 3.8 6.6 6.6 8 3 1.4 4 2.4 4 3.7 0 2-2.4 2.9-4.7 2.9-3.9 0-6.2-.6-9.5-2.1l-1.3 6.3c1.7.8 4.9 1.5 8.2 1.5 7.9 0 13.1-3.9 13.1-9.9" fill="#1434CB"/>
-              <path d="M89.7 37.6h10.4L90.8 2.4H82.2c-2 0-3.6 1.1-4.3 2.8l-12.2 32.4h11l2.2-6.1h13.4l1.4 6.1zm-11.4-11.3l5.5-15.1 3.2 15.1h-8.7z" fill="#1434CB"/>
-              <path d="M57.6 2.4L49.3 37.6h10.4L68 2.4H57.6z" fill="#F4B223"/>
-            </svg>
+        <div class="client-node node-visa" id="node-visa">
+          <div class="client-logo-box">
+            <img src="images/visa.png" alt="VISA" onerror="this.src='https://logo.clearbit.com/visa.com'">
           </div>
           <div class="client-info">
             <span class="client-name">VISA</span>
@@ -752,13 +753,9 @@
         </div>
 
         <!-- Node 3: Oaktree Capital -->
-        <div class="client-node node-oaktree">
-          <div class="client-logo-box" title="Oaktree Capital Logo">
-            <svg viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="44" stroke="#1e3a5f" stroke-width="5" fill="none"/>
-              <path d="M50 20 C38 20 30 30 30 42 C30 50 35 56 42 60 L42 74 L58 74 L58 60 C65 56 70 50 70 42 C70 30 62 20 50 20 Z" fill="#2d6a4f"/>
-              <path d="M47 74 L47 82 L53 82 L53 74 Z" fill="#1e3a5f"/>
-            </svg>
+        <div class="client-node node-oaktree" id="node-oaktree">
+          <div class="client-logo-box">
+            <img src="images/oaktree.png" alt="Oaktree Capital" onerror="this.src='https://logo.clearbit.com/oaktreecapital.com'">
           </div>
           <div class="client-info">
             <span class="client-name">Oaktree Capital</span>
@@ -767,17 +764,9 @@
         </div>
 
         <!-- Node 4: Fractal Analytics -->
-        <div class="client-node node-fractal">
-          <div class="client-logo-box" title="Fractal Analytics Logo">
-            <svg viewBox="0 0 100 100">
-              <!-- Fractal / Network inspired geometry -->
-              <circle cx="35" cy="35" r="14" fill="#ff4a22"/>
-              <circle cx="65" cy="35" r="10" fill="#2563eb"/>
-              <circle cx="50" cy="68" r="18" fill="#10b981"/>
-              <line x1="35" y1="35" x2="65" y2="35" stroke="#94a3b8" stroke-width="4"/>
-              <line x1="35" y1="35" x2="50" y2="68" stroke="#94a3b8" stroke-width="4"/>
-              <line x1="65" y1="35" x2="50" y2="68" stroke="#94a3b8" stroke-width="4"/>
-            </svg>
+        <div class="client-node node-fractal" id="node-fractal">
+          <div class="client-logo-box">
+            <img src="images/fractal.png" alt="Fractal Analytics" onerror="this.src='https://logo.clearbit.com/fractal.ai'">
           </div>
           <div class="client-info">
             <span class="client-name">Fractal Analytics</span>
@@ -786,12 +775,9 @@
         </div>
 
         <!-- Node 5: Infosys -->
-        <div class="client-node node-infosys">
-          <div class="client-logo-box" title="Infosys Logo">
-            <svg viewBox="0 0 120 50">
-              <!-- Stylized Infosys Blue Identity Typography -->
-              <text x="5" y="34" font-family="'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="700" fill="#007cc3" letter-spacing="-1">Infosys</text>
-            </svg>
+        <div class="client-node node-infosys" id="node-infosys">
+          <div class="client-logo-box">
+            <img src="images/infosys.png" alt="Infosys" onerror="this.src='https://logo.clearbit.com/infosys.com'">
           </div>
           <div class="client-info">
             <span class="client-name">Infosys</span>
@@ -801,7 +787,7 @@
       </div>
     </section>
 
-    <!-- Categorized Skills Section -->
+    <!-- Technical Skills Section -->
     <section id="skills">
       <h3 class="section-title"><i data-lucide="cpu" size="20"></i> Technical Expertise</h3>
       <div class="skills-category-grid">
@@ -868,12 +854,12 @@
       </div>
     </section>
 
-    <!-- Experience Timeline Section -->
+    <!-- Work Experience Section -->
     <section id="experience">
       <h3 class="section-title"><i data-lucide="briefcase" size="20"></i> Work Experience</h3>
       <div class="experience-list">
 
-        <!-- Job 1 -->
+        <!-- Monotype -->
         <div class="job-card">
           <div class="job-header">
             <div class="job-title-group">
@@ -887,7 +873,7 @@
           </p>
         </div>
 
-        <!-- Job 2 -->
+        <!-- Fractal -->
         <div class="job-card">
           <div class="job-header">
             <div class="job-title-group">
@@ -901,7 +887,7 @@
           </p>
         </div>
 
-        <!-- Job 3 -->
+        <!-- Infosys -->
         <div class="job-card">
           <div class="job-header">
             <div class="job-title-group">
@@ -923,23 +909,23 @@
       <h3 class="section-title"><i data-lucide="award" size="20"></i> Certifications</h3>
       <div class="cert-grid">
         <div class="cert-card">
-          <i data-lucide="check-circle-2" size="20"></i>
+          <i data-lucide="check-circle-2" size="18"></i>
           <span>AWS Certified Solutions Architect – Associate</span>
         </div>
         <div class="cert-card">
-          <i data-lucide="check-circle-2" size="20"></i>
+          <i data-lucide="check-circle-2" size="18"></i>
           <span>Fractal Certified Data Engineer</span>
         </div>
         <div class="cert-card">
-          <i data-lucide="check-circle-2" size="20"></i>
+          <i data-lucide="check-circle-2" size="18"></i>
           <span>GCP Associate Cloud Data Engineer</span>
         </div>
         <div class="cert-card">
-          <i data-lucide="check-circle-2" size="20"></i>
+          <i data-lucide="check-circle-2" size="18"></i>
           <span>Infosys Certified Big Data Developer</span>
         </div>
         <div class="cert-card">
-          <i data-lucide="check-circle-2" size="20"></i>
+          <i data-lucide="check-circle-2" size="18"></i>
           <span>Infosys Certified Business Intelligence Associate</span>
         </div>
       </div>
@@ -966,9 +952,49 @@
     </div>
   </footer>
 
-  <!-- Initialize Lucide Icons -->
+  <!-- Dynamic SVG Connector Script & Icon Loader -->
   <script>
     lucide.createIcons();
+
+    // Dynamically calculate and draw SVG lines from center node to client nodes on Desktop
+    function drawNetworkLines() {
+      const container = document.getElementById('networkWrapper');
+      const svg = document.getElementById('networkSvg');
+      const center = document.getElementById('centerNode');
+      const clientNodes = document.querySelectorAll('.client-node');
+
+      if (window.innerWidth <= 768) {
+        return; // Don't draw on mobile where items are cleanly stacked
+      }
+
+      const containerRect = container.getBoundingClientRect();
+      const centerRect = center.getBoundingClientRect();
+
+      const startX = (centerRect.left + centerRect.width / 2) - containerRect.left;
+      const startY = (centerRect.top + centerRect.height / 2) - containerRect.top;
+
+      // Keep defs marker, remove old lines
+      svg.querySelectorAll('line').forEach(line => line.remove());
+
+      clientNodes.forEach(node => {
+        const nodeRect = node.getBoundingClientRect();
+        const endX = (nodeRect.left + nodeRect.width / 2) - containerRect.left;
+        const endY = (nodeRect.top + nodeRect.height / 2) - containerRect.top;
+
+        const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+        line.setAttribute('x1', startX);
+        line.setAttribute('y1', startY);
+        line.setAttribute('x2', endX);
+        line.setAttribute('y2', endY);
+        line.setAttribute('class', 'net-line');
+        line.setAttribute('marker-end', 'url(#arrow)');
+        svg.appendChild(line);
+      });
+    }
+
+    // Run on load and resize
+    window.addEventListener('load', drawNetworkLines);
+    window.addEventListener('resize', drawNetworkLines);
   </script>
 </body>
 </html>
