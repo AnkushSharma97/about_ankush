@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ankush Sharma | Senior Data Engineer</title>
   
+  <!-- Browser Title Bar Favicon & Mobile Touch Icons -->
+  <link rel="icon" type="image/jpeg" href="profile.jpg" />
+  <link rel="shortcut icon" type="image/jpeg" href="profile.jpg" />
+  <link rel="apple-touch-icon" href="profile.jpg" />
+
   <!-- Modern Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -600,7 +605,7 @@
     ======================================================= */
     @media (max-width: 768px) {
       nav ul {
-        display: none; /* Simplifies mobile top bar */
+        display: none;
       }
       
       header {
@@ -611,7 +616,6 @@
         font-size: 2rem;
       }
 
-      /* Clean stacked list on mobile */
       .network-container {
         min-height: auto;
         padding: 1.5rem 1rem;
@@ -620,7 +624,7 @@
       }
 
       .network-svg {
-        display: none; /* Hide desktop SVG connecting lines */
+        display: none;
       }
 
       .center-node {
@@ -964,7 +968,7 @@
       const clientNodes = document.querySelectorAll('.client-node');
 
       if (window.innerWidth <= 768) {
-        return; // Don't draw on mobile where items are cleanly stacked
+        return;
       }
 
       const containerRect = container.getBoundingClientRect();
@@ -973,7 +977,6 @@
       const startX = (centerRect.left + centerRect.width / 2) - containerRect.left;
       const startY = (centerRect.top + centerRect.height / 2) - containerRect.top;
 
-      // Keep defs marker, remove old lines
       svg.querySelectorAll('line').forEach(line => line.remove());
 
       clientNodes.forEach(node => {
@@ -992,7 +995,6 @@
       });
     }
 
-    // Run on load and resize
     window.addEventListener('load', drawNetworkLines);
     window.addEventListener('resize', drawNetworkLines);
   </script>
