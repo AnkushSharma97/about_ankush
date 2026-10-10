@@ -1006,6 +1006,69 @@
       border-radius: 16px !important;
     }
 
+  
+    /* Sticky profile header: keep name, title and social links visible while scrolling */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 900;
+      background: rgba(245, 243, 236, 0.97) !important;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 0.8rem 0 0.9rem !important;
+      margin: 0;
+      border-bottom: 1px solid #d8dccd;
+      box-shadow: 0 8px 22px rgba(32, 42, 34, 0.06);
+      transition: padding 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    header .avatar-wrapper {
+      margin-bottom: 0.35rem;
+    }
+
+    header .profile-pic {
+      width: 76px;
+      height: 76px;
+      transition: width 0.25s ease, height 0.25s ease;
+    }
+
+    header h1 {
+      font-size: 1.65rem;
+      margin-bottom: 0.05rem;
+    }
+
+    header h2 {
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header .cta-buttons {
+      gap: 0.5rem;
+    }
+
+    header .btn {
+      padding: 0.4rem 0.8rem;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 0.55rem 0 0.65rem !important;
+      }
+      header .profile-pic {
+        width: 54px;
+        height: 54px;
+      }
+      header h1 {
+        font-size: 1.3rem;
+      }
+      header h2 {
+        font-size: 0.82rem;
+      }
+      header .meta-details {
+        display: none;
+      }
+    }
+
   </style>
 </head>
 <body>
