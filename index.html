@@ -20,21 +20,20 @@
 
   <style>
     :root {
-      --bg-main: #0b1120;
-      --bg-surface: #131d31;
-      --bg-card: #18233c;
-      --bg-card-hover: #1f2e4d;
-      --border-subtle: #263554;
-      --border-focus: #38bdf8;
-      
-      --text-main: #f8fafc;
-      --text-muted: #94a3b8;
-      --text-accent: #38bdf8;
-      --accent-glow: rgba(56, 189, 248, 0.18);
-      
-      --badge-bg: rgba(56, 189, 248, 0.08);
-      --badge-text: #7dd3fc;
-      --badge-border: rgba(56, 189, 248, 0.2);
+      color-scheme: light;
+      --bg-main: #ffffff;
+      --bg-surface: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f5f9;
+      --border-subtle: #e2e8f0;
+      --border-focus: #0284c7;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --text-accent: #0284c7;
+      --accent-glow: rgba(2, 132, 199, 0.12);
+      --badge-bg: #eff6ff;
+      --badge-text: #075985;
+      --badge-border: #bfdbfe;
     }
 
     * {
@@ -46,7 +45,7 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background-color: var(--bg-main);
+      background-color: #0f172a;
       color: var(--text-main);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
@@ -61,7 +60,7 @@
       width: 100%;
       max-width: 1000px;
       height: 400px;
-      background: radial-gradient(circle, rgba(56, 189, 248, 0.12) 0%, rgba(11, 17, 32, 0) 70%);
+      background: radial-gradient(circle, rgba(2, 132, 199, 0.08) 0%, rgba(255, 255, 255, 0) 70%);
       z-index: -1;
       pointer-events: none;
     }
@@ -72,7 +71,7 @@
       top: 0;
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
-      background: rgba(11, 17, 32, 0.9);
+      background: rgba(255, 255, 255, 0.92);
       border-bottom: 1px solid var(--border-subtle);
       z-index: 1000;
       padding: 0.85rem 0;
@@ -162,7 +161,7 @@
       font-weight: 800;
       letter-spacing: -0.03em;
       margin-bottom: 0.25rem;
-      background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
+      background: linear-gradient(180deg, #0f172a 0%, #334155 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -220,7 +219,7 @@
 
     .btn-primary {
       background: #0284c7;
-      color: #fff;
+      color: #ffffff;
     }
 
     .btn-primary:hover {
@@ -229,20 +228,20 @@
     }
 
     .btn-secondary {
-      background: var(--bg-card);
+      background: #ffffff;
       color: var(--text-main);
       border: 1px solid var(--border-subtle);
     }
 
     .btn-secondary:hover {
-      background: var(--bg-card-hover);
+      background: #f1f5f9;
       transform: translateY(-1px);
     }
 
     /* Section Typography */
     section {
       padding: 2.5rem 0;
-      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      border-top: 1px solid #e2e8f0;
     }
 
     .section-title {
@@ -268,11 +267,11 @@
     }
 
     .summary-card {
-      background: var(--bg-surface);
+      background: #f8fafc;
       border: 1px solid var(--border-subtle);
       border-radius: 12px;
       padding: 1.5rem;
-      color: #cbd5e1;
+      color: #334155;
       font-size: 1rem;
       line-height: 1.8;
     }
@@ -284,7 +283,7 @@
       position: relative;
       width: 100%;
       min-height: 480px;
-      background: radial-gradient(circle at center, rgba(30, 41, 59, 0.4) 0%, var(--bg-surface) 100%);
+      background: #f8fafc;
       border: 1px solid var(--border-subtle);
       border-radius: 16px;
       overflow: hidden;
@@ -347,7 +346,7 @@
       border-radius: 50%;
       border: 3px solid var(--text-accent);
       box-shadow: 0 0 20px rgba(56, 189, 248, 0.35);
-      background: var(--bg-main);
+      background: #ffffff;
       object-fit: cover;
     }
 
@@ -355,11 +354,11 @@
       margin-top: 8px;
       font-size: 0.75rem;
       font-weight: 700;
-      background: rgba(15, 23, 42, 0.9);
+      background: #eaf4fb;
       border: 1px solid var(--border-focus);
       padding: 0.15rem 0.55rem;
       border-radius: 999px;
-      color: #fff;
+      color: #0f172a;
       white-space: nowrap;
     }
 
@@ -367,7 +366,7 @@
     .client-node {
       position: absolute;
       z-index: 2;
-      background: var(--bg-card);
+      background: #ffffff;
       border: 1px solid var(--border-subtle);
       border-radius: 12px;
       padding: 0.6rem 1rem;
@@ -375,7 +374,7 @@
       align-items: center;
       gap: 0.75rem;
       transform: translate(-50%, -50%);
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.10);
       transition: all 0.3s ease;
       cursor: default;
     }
@@ -383,7 +382,7 @@
     .client-node:hover {
       border-color: var(--border-focus);
       transform: translate(-50%, -50%) scale(1.05);
-      box-shadow: 0 8px 25px rgba(56, 189, 248, 0.25);
+      box-shadow: 0 8px 25px rgba(2, 132, 199, 0.12);
     }
 
     .client-logo-box {
@@ -413,7 +412,7 @@
     .client-node .client-name {
       font-weight: 700;
       font-size: 0.88rem;
-      color: #fff;
+      color: #0f172a;
     }
 
     .client-node .client-role {
@@ -437,7 +436,7 @@
     }
 
     .skill-block {
-      background: var(--bg-surface);
+      background: #f8fafc;
       border: 1px solid var(--border-subtle);
       border-radius: 12px;
       padding: 1.25rem;
@@ -451,7 +450,7 @@
     .skill-block h4 {
       font-size: 0.95rem;
       font-weight: 600;
-      color: #e2e8f0;
+      color: #1e293b;
       margin-bottom: 0.85rem;
       display: flex;
       align-items: center;
@@ -470,8 +469,40 @@
       background: var(--badge-bg);
       color: var(--badge-text);
       border: 1px solid var(--badge-border);
-      padding: 0.25rem 0.65rem;
+      padding: 0.3rem 0.65rem;
       border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .tech-icon {
+      width: 18px;
+      height: 18px;
+      object-fit: contain;
+      flex-shrink: 0;
+      vertical-align: middle;
+    }
+
+    .tech-icon.aws {
+      width: 20px;
+    }
+
+    .tech-icon.snowflake {
+      width: 17px;
+    }
+
+    .client-experience-subsection {
+      margin: 0 0 2rem;
+    }
+
+    .client-experience-subsection .section-title {
+      font-size: 1.1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .client-experience-subsection .section-subtitle {
+      margin-top: 0;
     }
 
     /* Experience */
@@ -482,7 +513,7 @@
     }
 
     .job-card {
-      background: var(--bg-surface);
+      background: #f8fafc;
       border: 1px solid var(--border-subtle);
       border-radius: 12px;
       padding: 1.5rem;
@@ -506,7 +537,7 @@
     .job-title-group h4 {
       font-size: 1.1rem;
       font-weight: 600;
-      color: #fff;
+      color: #0f172a;
     }
 
     .job-company {
@@ -518,14 +549,14 @@
     .job-date {
       font-size: 0.82rem;
       color: var(--text-muted);
-      background: var(--bg-card);
+      background: #ffffff;
       padding: 0.2rem 0.65rem;
       border-radius: 999px;
       border: 1px solid var(--border-subtle);
     }
 
     .job-description {
-      color: #cbd5e1;
+      color: #334155;
       font-size: 0.92rem;
       line-height: 1.7;
     }
@@ -538,7 +569,7 @@
     }
 
     .cert-card {
-      background: var(--bg-surface);
+      background: #f8fafc;
       border: 1px solid var(--border-subtle);
       border-radius: 10px;
       padding: 1rem 1.25rem;
@@ -560,12 +591,12 @@
     .cert-card span {
       font-size: 0.9rem;
       font-weight: 500;
-      color: #e2e8f0;
+      color: #1e293b;
     }
 
     /* Education */
     .edu-card {
-      background: var(--bg-surface);
+      background: #f8fafc;
       border: 1px solid var(--border-subtle);
       border-radius: 12px;
       padding: 1.25rem 1.5rem;
@@ -655,6 +686,40 @@
         transform: translateY(-2px);
       }
     }
+  
+    /* Light-theme heading contrast fix */
+    .section-title {
+      color: #0f172a !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+
+    .section-title i,
+    .section-title svg {
+      color: #0284c7 !important;
+      stroke: #0284c7;
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+
+    header h1 {
+      background: linear-gradient(180deg, #0f172a 0%, #334155 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .skill-block h4,
+    .job-title-group h4,
+    .edu-title {
+      color: #0f172a !important;
+    }
+
+    .summary-card,
+    .job-description,
+    .edu-field {
+      color: #334155 !important;
+    }
+
   </style>
 </head>
 <body>
@@ -667,8 +732,7 @@
       <a href="#" class="nav-logo">Ankush<span>.sharma</span></a>
       <ul>
         <li><a href="#about">About</a></li>
-        <li><a href="#clients">Clients & Brands</a></li>
-        <li><a href="#skills">Skills</a></li>
+                <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#certifications">Certifications</a></li>
       </ul>
@@ -706,9 +770,83 @@
       </div>
     </section>
 
-    <!-- Visual Client Hub (Mobile-Responsive & Direct Image Support) -->
-    <section id="clients">
-      <h3 class="section-title"><i data-lucide="network" size="20"></i> Companies & Enterprise Clients</h3>
+    <!-- Technical Skills Section -->
+    <section id="skills">
+      <h3 class="section-title"><i data-lucide="cpu" size="20"></i> Technical Expertise</h3>
+      <div class="skills-category-grid">
+        
+        <div class="skill-block">
+          <h4><i data-lucide="code" size="16"></i> Core Languages</h4>
+          <div class="pill-group">
+            <span class="pill"><img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python logo" loading="lazy">Python</span>
+            <span class="pill"><img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL logo" loading="lazy">SQL</span>
+            <span class="pill"><img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scala/scala-original.svg" alt="Scala logo" loading="lazy">Scala</span>
+            <span class="pill"><img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java logo" loading="lazy">Java</span>
+            <span class="pill"><img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Bash logo" loading="lazy">Unix / Bash</span>
+          </div>
+        </div>
+
+        <div class="skill-block">
+          <h4><i data-lucide="database" size="16"></i> Big Data & Processing</h4>
+          <div class="pill-group">
+            <span class="pill"><img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachespark/apachespark-original.svg" alt="Apache Spark logo" loading="lazy">PySpark</span>
+            <span class="pill"><img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachespark/apachespark-original.svg" alt="Apache Spark logo" loading="lazy">Apache Spark</span>
+            <span class="pill"><img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/hadoop/hadoop-original.svg" alt="Hadoop logo" loading="lazy">Hadoop</span>
+            <span class="pill"><img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg" alt="Apache logo" loading="lazy">Hive</span>
+            <span class="pill"><img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg" alt="Apache logo" loading="lazy">Presto</span>
+            <span class="pill"><img class="tech-icon aws" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS logo" loading="lazy">Athena</span>
+          </div>
+        </div>
+
+        <div class="skill-block">
+          <h4><i data-lucide="cloud" size="16"></i> Cloud & Warehousing</h4>
+          <div class="pill-group">
+            <span class="pill"><img class="tech-icon aws" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS logo" loading="lazy">AWS Glue</span>
+            <span class="pill"><img class="tech-icon aws" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS logo" loading="lazy">Step Functions</span>
+            <span class="pill"><img class="tech-icon aws" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS logo" loading="lazy">Redshift</span>
+            <span class="pill"><img class="tech-icon aws" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS logo" loading="lazy">S3 &amp; EMR</span>
+            <span class="pill"><img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="Microsoft data platform logo" loading="lazy">Microsoft Fabric</span>
+            <span class="pill"><img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Microsoft Azure logo" loading="lazy">Azure Data Factory (ADF)</span>
+            <span class="pill"><img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Microsoft Azure logo" loading="lazy">Azure Synapse Analytics</span>
+            <span class="pill"><img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Microsoft Azure logo" loading="lazy">Azure Blob Storage</span>
+            <span class="pill"><img class="tech-icon snowflake" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/snowflake/snowflake-original.svg" alt="Snowflake logo" loading="lazy">Snowflake</span>
+            <span class="pill"><img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB logo" loading="lazy">MongoDB</span>
+            <span class="pill"><img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cassandra/cassandra-original.svg" alt="Apache Cassandra logo" loading="lazy">Cassandra</span>
+          </div>
+        </div>
+
+        <div class="skill-block">
+          <h4><i data-lucide="git-branch" size="16"></i> Orchestration & DevOps</h4>
+          <div class="pill-group">
+            <span class="pill"><img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apacheairflow/apacheairflow-original.svg" alt="Apache Airflow logo" loading="lazy">Apache Airflow</span>
+            <span class="pill"><img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" alt="Apache Kafka logo" loading="lazy">Kafka</span>
+            <span class="pill"><img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker logo" loading="lazy">Docker</span>
+            <span class="pill"><img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" alt="Terraform logo" loading="lazy">Terraform</span>
+            <span class="pill"><img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="Jenkins logo" loading="lazy">Jenkins</span>
+            <span class="pill"><img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg" alt="CI/CD logo" loading="lazy">CI/CD</span>
+          </div>
+        </div>
+
+        <div class="skill-block">
+          <h4><i data-lucide="bar-chart-3" size="16"></i> Analytics & Architecture</h4>
+          <div class="pill-group">
+            <span class="pill">Data Warehousing</span>
+            <span class="pill">Dimensional Modeling</span>
+            <span class="pill">CDC / SCD</span>
+            <span class="pill"><img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tableau/tableau-original.svg" alt="Tableau logo" loading="lazy">Tableau</span>
+            <span class="pill"><img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/powerbi/powerbi-original.svg" alt="Power BI logo" loading="lazy">Power BI</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="experience">
+      <h3 class="section-title"><i data-lucide="briefcase" size="20"></i> Work Experience</h3>
+      <!-- Visual Client Hub (Mobile-Responsive & Direct Image Support) -->
+    <div id="clients" class="client-experience-subsection">
+      <h4 class="section-title"><i data-lucide="network" size="20"></i> Companies & Enterprise Clients</h4>
       <p class="section-subtitle">Delivering high-impact data engineering solutions for global industry leaders</p>
       
       <div class="network-container" id="networkWrapper">
@@ -794,78 +932,8 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <!-- Technical Skills Section -->
-    <section id="skills">
-      <h3 class="section-title"><i data-lucide="cpu" size="20"></i> Technical Expertise</h3>
-      <div class="skills-category-grid">
-        
-        <div class="skill-block">
-          <h4><i data-lucide="code" size="16"></i> Core Languages</h4>
-          <div class="pill-group">
-            <span class="pill">Python</span>
-            <span class="pill">SQL</span>
-            <span class="pill">Scala</span>
-            <span class="pill">Java</span>
-            <span class="pill">Unix / Bash</span>
-          </div>
-        </div>
-
-        <div class="skill-block">
-          <h4><i data-lucide="database" size="16"></i> Big Data & Processing</h4>
-          <div class="pill-group">
-            <span class="pill">PySpark</span>
-            <span class="pill">Apache Spark</span>
-            <span class="pill">Hadoop</span>
-            <span class="pill">Hive</span>
-            <span class="pill">Presto</span>
-            <span class="pill">Athena</span>
-          </div>
-        </div>
-
-        <div class="skill-block">
-          <h4><i data-lucide="cloud" size="16"></i> Cloud & Warehousing</h4>
-          <div class="pill-group">
-            <span class="pill">AWS Glue</span>
-            <span class="pill">Step Functions</span>
-            <span class="pill">Redshift</span>
-            <span class="pill">S3 & EMR</span>
-            <span class="pill">Snowflake</span>
-            <span class="pill">MongoDB</span>
-            <span class="pill">Cassandra</span>
-          </div>
-        </div>
-
-        <div class="skill-block">
-          <h4><i data-lucide="git-branch" size="16"></i> Orchestration & DevOps</h4>
-          <div class="pill-group">
-            <span class="pill">Apache Airflow</span>
-            <span class="pill">Kafka</span>
-            <span class="pill">Docker</span>
-            <span class="pill">Terraform</span>
-            <span class="pill">Jenkins</span>
-            <span class="pill">CI/CD</span>
-          </div>
-        </div>
-
-        <div class="skill-block">
-          <h4><i data-lucide="bar-chart-3" size="16"></i> Analytics & Architecture</h4>
-          <div class="pill-group">
-            <span class="pill">Data Warehousing</span>
-            <span class="pill">Dimensional Modeling</span>
-            <span class="pill">CDC / SCD</span>
-            <span class="pill">Tableau</span>
-            <span class="pill">Power BI</span>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Work Experience Section -->
-    <section id="experience">
-      <h3 class="section-title"><i data-lucide="briefcase" size="20"></i> Work Experience</h3>
       <div class="experience-list">
 
         <!-- Monotype -->
