@@ -19,21 +19,21 @@
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <style>
-    :root {
+        :root {
       color-scheme: light;
       --bg-main: #ffffff;
-      --bg-surface: #f8fafc;
+      --bg-surface: #f7f7f7;
       --bg-card: #ffffff;
-      --bg-card-hover: #f1f5f9;
-      --border-subtle: #e2e8f0;
-      --border-focus: #0284c7;
-      --text-main: #0f172a;
-      --text-muted: #64748b;
-      --text-accent: #0284c7;
-      --accent-glow: rgba(2, 132, 199, 0.12);
-      --badge-bg: #eff6ff;
-      --badge-text: #075985;
-      --badge-border: #bfdbfe;
+      --bg-card-hover: #f0f0f0;
+      --border-subtle: #dedede;
+      --border-focus: #555555;
+      --text-main: #171717;
+      --text-muted: #666666;
+      --text-accent: #333333;
+      --accent-glow: rgba(0, 0, 0, 0.08);
+      --badge-bg: #f3f3f3;
+      --badge-text: #333333;
+      --badge-border: #d8d8d8;
     }
 
     * {
@@ -60,7 +60,7 @@
       width: 100%;
       max-width: 1000px;
       height: 400px;
-      background: radial-gradient(circle, rgba(2, 132, 199, 0.08) 0%, rgba(255, 255, 255, 0) 70%);
+      background: radial-gradient(circle, rgba(0, 0, 0, 0.04) 0%, rgba(255, 255, 255, 0) 70%);
       z-index: -1;
       pointer-events: none;
     }
@@ -71,7 +71,7 @@
       top: 0;
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
-      background: rgba(255, 255, 255, 0.92);
+      background: rgba(255, 255, 255, 0.96);
       border-bottom: 1px solid var(--border-subtle);
       z-index: 1000;
       padding: 0.85rem 0;
@@ -161,7 +161,7 @@
       font-weight: 800;
       letter-spacing: -0.03em;
       margin-bottom: 0.25rem;
-      background: linear-gradient(180deg, #0f172a 0%, #334155 100%);
+      background: linear-gradient(180deg, #171717 0%, #555555 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -218,12 +218,12 @@
     }
 
     .btn-primary {
-      background: #0284c7;
+      background: #333333;
       color: #ffffff;
     }
 
     .btn-primary:hover {
-      background: #0369a1;
+      background: #171717;
       transform: translateY(-1px);
     }
 
@@ -303,7 +303,7 @@
     }
 
     .net-line {
-      stroke: rgba(56, 189, 248, 0.4);
+      stroke: rgba(0, 0, 0, 0.22);
       stroke-width: 2;
       stroke-dasharray: 6, 6;
       animation: dashPulse 25s linear infinite;
@@ -330,7 +330,7 @@
       width: 110px;
       height: 110px;
       border-radius: 50%;
-      border: 2px solid var(--text-accent);
+      border: 2px solid #555555;
       animation: pulse-grow 2.5s infinite ease-out;
       pointer-events: none;
     }
@@ -344,8 +344,8 @@
       width: 80px;
       height: 80px;
       border-radius: 50%;
-      border: 3px solid var(--text-accent);
-      box-shadow: 0 0 20px rgba(56, 189, 248, 0.35);
+      border: 3px solid #555555;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.10);
       background: #ffffff;
       object-fit: cover;
     }
@@ -354,8 +354,8 @@
       margin-top: 8px;
       font-size: 0.75rem;
       font-weight: 700;
-      background: #eaf4fb;
-      border: 1px solid var(--border-focus);
+      background: #f3f3f3;
+      border: 1px solid #777777;
       padding: 0.15rem 0.55rem;
       border-radius: 999px;
       color: #0f172a;
@@ -380,9 +380,9 @@
     }
 
     .client-node:hover {
-      border-color: var(--border-focus);
+      border-color: #555555;
       transform: translate(-50%, -50%) scale(1.05);
-      box-shadow: 0 8px 25px rgba(2, 132, 199, 0.12);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
     }
 
     .client-logo-box {
@@ -444,7 +444,7 @@
     }
 
     .skill-block:hover {
-      border-color: var(--border-focus);
+      border-color: #555555;
     }
 
     .skill-block h4 {
@@ -521,7 +521,7 @@
     }
 
     .job-card:hover {
-      border-color: rgba(56, 189, 248, 0.4);
+      border-color: rgba(0, 0, 0, 0.22);
       transform: translateY(-2px);
     }
 
@@ -580,11 +580,11 @@
     }
 
     .cert-card:hover {
-      border-color: #38bdf8;
+      border-color: #555555;
     }
 
     .cert-card i {
-      color: #38bdf8;
+      color: #555555;
       flex-shrink: 0;
     }
 
@@ -696,14 +696,14 @@
 
     .section-title i,
     .section-title svg {
-      color: #0284c7 !important;
-      stroke: #0284c7;
+      color: #333333 !important;
+      stroke: #333333;
       opacity: 1 !important;
       visibility: visible !important;
     }
 
     header h1 {
-      background: linear-gradient(180deg, #0f172a 0%, #334155 100%);
+      background: linear-gradient(180deg, #171717 0%, #555555 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -718,6 +718,292 @@
     .job-description,
     .edu-field {
       color: #334155 !important;
+    }
+
+  
+    /* Final neutral theme override: grayscale only, no blue accents */
+    :root {
+      --text-accent: #333333;
+      --border-focus: #555555;
+      --badge-bg: #f3f3f3;
+      --badge-text: #333333;
+      --badge-border: #d8d8d8;
+      --accent-glow: rgba(0, 0, 0, 0.08);
+    }
+    .section-title i,
+    .section-title svg,
+    .cert-card i {
+      color: #444444 !important;
+      stroke: #444444 !important;
+    }
+    .btn-primary {
+      background: #333333 !important;
+      color: #ffffff !important;
+    }
+    .btn-primary:hover {
+      background: #171717 !important;
+    }
+    .pill {
+      background: #f3f3f3 !important;
+      color: #333333 !important;
+      border-color: #d8d8d8 !important;
+    }
+    .nav-logo span,
+    nav a:hover,
+    .meta-item a:hover,
+    footer a,
+    .job-company {
+      color: #333333 !important;
+    }
+    .net-line {
+      stroke: rgba(0, 0, 0, 0.22) !important;
+    }
+    .center-node img,
+    .profile-pic {
+      border-color: #555555 !important;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.08) !important;
+    }
+
+  
+    /* Strict neutral grayscale: remove all blue-tinted backgrounds */
+    html, body {
+      background: #ffffff !important;
+      background-color: #ffffff !important;
+      color: #171717 !important;
+    }
+    body, .container, header, section, footer, nav, .nav-container {
+      background-color: #ffffff !important;
+    }
+    .ambient-bg {
+      display: none !important;
+      background: none !important;
+    }
+    .summary-card,
+    .skill-block,
+    .job-card,
+    .cert-card,
+    .edu-card,
+    .network-container,
+    .client-node,
+    .client-logo-box,
+    .btn-secondary {
+      background: #f7f7f7 !important;
+      background-color: #f7f7f7 !important;
+      background-image: none !important;
+      border-color: #dedede !important;
+      box-shadow: none !important;
+    }
+    .client-logo-box {
+      background: #ffffff !important;
+    }
+    .nav-logo, nav a, .section-title, .section-subtitle,
+    .summary-card, .skill-block h4, .pill, .job-title-group h4,
+    .job-company, .job-date, .job-description, .cert-card span,
+    .edu-title, .edu-field, footer, .meta-details {
+      color: #222222 !important;
+    }
+    .section-title i, .section-title svg, .cert-card i {
+      color: #444444 !important;
+      stroke: #444444 !important;
+    }
+    .pill {
+      background: #eeeeee !important;
+      background-color: #eeeeee !important;
+      background-image: none !important;
+      border: 1px solid #d5d5d5 !important;
+    }
+    .btn-primary, .btn-primary:hover {
+      color: #ffffff !important;
+      background: #333333 !important;
+      background-color: #333333 !important;
+      border-color: #333333 !important;
+      box-shadow: none !important;
+    }
+    .btn-secondary:hover, .skill-block:hover, .job-card:hover,
+    .client-node:hover, .cert-card:hover {
+      background: #f0f0f0 !important;
+      background-color: #f0f0f0 !important;
+      border-color: #c8c8c8 !important;
+      box-shadow: none !important;
+    }
+    .profile-pic, .center-node img {
+      border-color: #555555 !important;
+      box-shadow: none !important;
+    }
+    .center-node .pulse-ring {
+      border-color: #777777 !important;
+      animation: none !important;
+    }
+    .network-svg .net-line {
+      stroke: #b5b5b5 !important;
+    }
+    .center-label {
+      color: #222222 !important;
+      background: #eeeeee !important;
+      border-color: #d5d5d5 !important;
+    }
+    .nav-logo span, .meta-item a:hover, nav a:hover, footer a {
+      color: #333333 !important;
+    }
+
+  
+    /* Warm editorial portfolio theme: ivory, sage and forest green */
+    :root {
+      color-scheme: light;
+      --bg-main: #f5f3ec;
+      --bg-surface: #eeeee5;
+      --bg-card: #fbfaf6;
+      --bg-card-hover: #e7e9dd;
+      --border-subtle: #d8dccd;
+      --border-focus: #74866a;
+      --text-main: #202a22;
+      --text-muted: #687267;
+      --text-accent: #536b4f;
+      --accent-glow: rgba(83, 107, 79, 0.10);
+      --badge-bg: #e8ecdf;
+      --badge-text: #344a32;
+      --badge-border: #cbd4c0;
+    }
+
+    html, body {
+      background: #f5f3ec !important;
+      background-color: #f5f3ec !important;
+      color: #202a22 !important;
+    }
+
+    body, .container, header, section, footer, nav, .nav-container {
+      background-color: #f5f3ec !important;
+    }
+
+    .ambient-bg {
+      display: block !important;
+      background: radial-gradient(ellipse at top, rgba(116, 134, 106, 0.13) 0%, rgba(245, 243, 236, 0) 68%) !important;
+    }
+
+    nav {
+      background: rgba(245, 243, 236, 0.94) !important;
+      border-bottom-color: #d8dccd !important;
+    }
+
+    .summary-card,
+    .skill-block,
+    .job-card,
+    .cert-card,
+    .edu-card,
+    .network-container,
+    .client-node,
+    .btn-secondary {
+      background: #fbfaf6 !important;
+      background-color: #fbfaf6 !important;
+      background-image: none !important;
+      border-color: #d8dccd !important;
+      box-shadow: 0 8px 24px rgba(44, 57, 42, 0.045) !important;
+    }
+
+    .network-container {
+      background: radial-gradient(circle at center, #fbfaf6 0%, #eeeee5 100%) !important;
+    }
+
+    .client-logo-box {
+      background: #ffffff !important;
+      border-color: #e2e3db !important;
+    }
+
+    .section-title,
+    .skill-block h4,
+    .job-title-group h4,
+    .edu-title {
+      color: #202a22 !important;
+    }
+
+    .section-title i,
+    .section-title svg,
+    .cert-card i {
+      color: #536b4f !important;
+      stroke: #536b4f !important;
+    }
+
+    .section-subtitle,
+    .summary-card,
+    .job-description,
+    .edu-field,
+    .meta-details,
+    footer {
+      color: #687267 !important;
+    }
+
+    .nav-logo span,
+    nav a:hover,
+    .meta-item a:hover,
+    footer a,
+    .job-company {
+      color: #536b4f !important;
+    }
+
+    .pill {
+      background: #e8ecdf !important;
+      background-color: #e8ecdf !important;
+      color: #344a32 !important;
+      border-color: #cbd4c0 !important;
+    }
+
+    .btn-primary,
+    .btn-primary:hover {
+      background: #40563d !important;
+      background-color: #40563d !important;
+      color: #ffffff !important;
+      border-color: #40563d !important;
+      box-shadow: none !important;
+    }
+
+    .btn-secondary:hover,
+    .skill-block:hover,
+    .job-card:hover,
+    .client-node:hover,
+    .cert-card:hover {
+      background: #f0f1e9 !important;
+      background-color: #f0f1e9 !important;
+      border-color: #aebba3 !important;
+      box-shadow: 0 10px 26px rgba(44, 57, 42, 0.08) !important;
+    }
+
+    .profile-pic,
+    .center-node img {
+      border-color: #74866a !important;
+      box-shadow: 0 0 0 5px rgba(116, 134, 106, 0.12) !important;
+    }
+
+    .center-node .pulse-ring {
+      border-color: #74866a !important;
+    }
+
+    .network-svg .net-line {
+      stroke: rgba(83, 107, 79, 0.42) !important;
+    }
+
+    .center-label {
+      color: #344a32 !important;
+      background: #e8ecdf !important;
+      border-color: #cbd4c0 !important;
+    }
+
+    .job-date {
+      background: #eeeee5 !important;
+      color: #53614f !important;
+      border-color: #d8dccd !important;
+    }
+
+    .section-title {
+      letter-spacing: -0.025em;
+    }
+
+    .skill-block,
+    .job-card,
+    .summary-card,
+    .cert-card,
+    .edu-card,
+    .network-container {
+      border-radius: 16px !important;
     }
 
   </style>
@@ -854,7 +1140,7 @@
         <svg class="network-svg" id="networkSvg">
           <defs>
             <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-              <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#38bdf8" />
+              <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#555555" />
             </marker>
           </defs>
         </svg>
